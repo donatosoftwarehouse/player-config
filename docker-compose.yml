@@ -1,0 +1,10 @@
+services:
+  frontend:
+    user: '${GP_LB_DOCKER_USER}'
+    build: .
+    working_dir: /app
+    command: npm run dev
+    volumes:
+      - .:/app
+    ports:
+      - '3001:3001'
